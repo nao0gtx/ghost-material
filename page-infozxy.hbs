@@ -1,0 +1,103 @@
+{{!< default }}
+{{#post}}
+
+
+{{! Post navbar }}
+
+
+
+{{! Post header }}
+<header class="header shaded bg-lighten" id="bg-darken-acover">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar--row container postinside">
+      <div class="navbar--icon">
+        <a class="ripple" href="{{@blog.url}}">
+          <i class="fa fa-arrow-left"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- Content -->
+  <div class="header--content onMiddle container">
+    <!-- Titles -->
+    <h1 class="header--title center">{{title}}</h1>
+  </div>
+  <!-- Background -->
+  {{#if image}}
+    <div/>
+    <img class="bg-image" id="bg-image-acover" src="{{image}}" style="opacity: 1;"/>
+  {{else}}{{#if @blog.cover}}
+    <img class="bg-image acover" id="bg-image-acover" src="{{@blog.cover}}" style="opacity: 1;"/>
+  {{/if}}{{/if}}
+</header>
+
+
+
+{{! Post Main }}
+<main class="main" role="main">
+  <article class="main--content container postinside" role="article">
+
+    {{! Content }}
+    <div class="post--content">{{content}}</div>
+
+
+  </article>
+</main>
+   <footer class="footer">
+      {{! Top part }}
+      <div class="footer--top">
+      <div class="footer--content container">
+        <div class="half">
+          <p><a href="{{@blog.url}}">{{@blog.title}}</a><br />
+            {{@blog.description}}</p>
+        </div>
+        <div class="half">
+          <ul class="footer--suscriptions">
+            <li>
+              <a href="#!">
+                <i class="mdi mdi-twitter-box"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="mdi mdi-google-plus-box"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="mdi mdi-github-box"></i>
+              </a>
+            </li>
+            <li>
+              <a href="{{@blog.url}}/rss/">
+                <i class="mdi mdi-rss-box"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      {{! Bottom part }}
+      <div class="footer--bottom">
+      <div class="footer--content container">
+        <div class="half">
+          <p><i class="mdi mdi-information-outline"></i>
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons BY-SA 4.0
+            </a> - {{date format="YYYY"}}
+          </p>
+        </div>
+        <div class="half">
+          <p>
+            <i class="mdi mdi-code-tags"></i>
+            <a href="http://ghost.org">Ghost</a>
+            <a href="https://github.com/nauzethc/ghost-material">Material</a>
+            <i class="mdi mdi-xml"></i>
+          </p>
+        </div>
+      </div>
+      </div>
+    </footer>
+{{/post}}

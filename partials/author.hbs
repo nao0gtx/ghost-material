@@ -1,0 +1,18 @@
+<div class="author">
+  <div class="author--media">
+    <nav class="fabs">
+      <a class="aboutmenu fab large ripple" href="{{@blog.url}}/infozxy">
+        <i class="fa fa-cogs"></i>
+      </a>
+    </nav>
+    {{#if image}}
+      <img class="image" src="{{image}}" />
+    {{else}}
+      <img class="image" src="{{@blog.url}}/shared/img/user-image.png" />
+    {{/if}}
+  </div>
+  <div class="author--info">
+    <h5 class="name">{{name}}</h5>
+    <p class="bio">{{bio}}</p>
+  </div>
+</div>
