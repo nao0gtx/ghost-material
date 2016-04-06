@@ -1,1 +1,1 @@
-acgp-m
+based on https://github.com/nauzethc/ghost-material
